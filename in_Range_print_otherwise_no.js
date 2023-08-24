@@ -1,7 +1,7 @@
 let x = 620;
 let y = 450 ;
 
-if(x<2000 || x>3000 )
+if(x<2000  || x>3000 )
 {
     console.log(x);
 }
