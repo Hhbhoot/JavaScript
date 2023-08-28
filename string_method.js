@@ -36,7 +36,7 @@ console.log(c);
 var c = a.slice(-8 , -1);
 console.log(c);
 
-var c = a.substr(-7,6);
+var c = a.substr(-7,.6);
 console.log(c);
 
 
