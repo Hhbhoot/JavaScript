@@ -48,6 +48,11 @@
 // let reg = text.match(/[a-m]/g);                            // Find Character between a and m
 // console.log(reg);
 
+// let text = "1234556754 Hello world";
+// let reg = text.match(/[H|l]/g); // Find character H or i
+// console.log(reg);
+
+
 let text = "1234556754 Hello world";
-let reg = text.match(/[H|l]/g); // Find character H or i
+let reg = text.search(/6/g);     // Find Character and return position
 console.log(reg);
