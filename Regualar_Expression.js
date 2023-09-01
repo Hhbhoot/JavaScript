@@ -68,6 +68,10 @@
 // reg.test("hello world");
 // console.log(reg.test("hello world"))
 
-let reg = /hello world/   ;                 //True
-reg.test("hello world");
-console.log(reg.test("hello world"))
+// let reg = /hello world/   ;                 //True
+// reg.test("hello world");
+// console.log(reg.test("hello world"))
+
+let text ="hello world " ;                 //Find charcacter except in the bracket
+let reg =text.match(/[^hl]/g)
+console.log(reg)
