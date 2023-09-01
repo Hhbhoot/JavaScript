@@ -56,6 +56,18 @@
 // let reg = text.search(/6/g);                               // Find Character and return position
 // console.log(reg);
 
-let reg = /h/;
+// let reg = /h/;
+// reg.test("hello world");
+// console.log(reg.test("hello world")); //  test() ==> find character in string ,if present return true , else false
+
+// let reg = /b/;
+// reg.test("hello world");
+// console.log(reg.test("hello world"))
+
+// let reg = /helloworld/   ;                 //false
+// reg.test("hello world");
+// console.log(reg.test("hello world"))
+
+let reg = /hello world/   ;                 //True
 reg.test("hello world");
-console.log(reg.test("hello world")); //  test() ==> find character in string ,if present return true , else false
+console.log(reg.test("hello world"))
