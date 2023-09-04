@@ -94,5 +94,30 @@
 // d.setTime();
 // console.log(d);
 
+ var d = new Date();
+ console.log(d);
+
+// d.setMilliseconds(500);
+// console.log(d);
+
+// d.setFullYear(1999);
+// console.log(d);
+
+// d.setDate(28);
+// console.log(d);
+
+// d.setMinutes(28);
+// d.setHours(28);
+// console.log(d);
+
+// d.setMonth(10);
+// console.log(d);
+
+// d.setTime();
+// console.log(d);
+
+d.getDay(5);
+console.log(d);
+
 
 
