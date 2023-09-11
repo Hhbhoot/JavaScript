@@ -1,21 +1,28 @@
 // Array Length
 
 let arr = [10, 20, 30, 40, " Hello ", "World", true, false];
-console.log(arr);
-console.log(arr.length);
+// console.log(arr);
+// console.log(arr.length);
 
-console.log(arr[0]);
-console.log(arr[5]);
-arr[5] = " Hitesh";
+// console.log(arr[0]);
+// console.log(arr[5]);
+// arr[5] = " Hitesh";
+// console.log(arr);
+
+// // push => Emter element in last Position
+
+// arr.push(25);
+// console.log(arr);
+
+// arr.push(45);
+// console.log(arr);
+
+// arr.length ==> Enter Element in last position
+
+arr[arr.length] = "Kishan" ;
+arr[arr.length] = " Kamo";
 console.log(arr);
 
-// push => Emter element in last Position
-
-arr.push(25);
-console.log(arr);
-
-arr.push(45);
-console.log(arr);
 
 // Pop => Delete Element From last position
 
