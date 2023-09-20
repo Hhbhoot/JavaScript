@@ -4,7 +4,7 @@ function PerfectNumber() {
 
     for (let i = 1; i < x; i++) {
 
-        if (x % i == 0) {
+        if (x % i === 0) {
             sum += i;
         }
     }
