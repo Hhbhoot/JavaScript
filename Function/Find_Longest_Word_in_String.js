@@ -1,4 +1,4 @@
-let string = "Hello World Good Morning rgsfhguhjkfh";
+let string = "Hello World Good Morning ";
 
 function Longest() {
 
