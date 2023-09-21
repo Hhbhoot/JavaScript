@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Digital Clock</title>
+
+    <style>
+      div {
+        text-align: center;
+        font-size: 100px;
+        font-style: italic;
+        color: brown;
+      }
+    </style>
+    <script>
+      function time() {
+        var date = new Date();
+        var hour = date.getHours(0);
+        var minutes = date.getMinutes();
+        var Seconds = date.getSeconds();
+
+        var period = "";
+
+        if (hour >= 12) period = "PM";
+        else period = "AM";
+
+        if (hour > 12) hour = hour - 12;
+
+        if (hour < 10) hour = "0" + hour;
+
+        if (minutes < 10) minutes = "0" + minutes;
+
+        if (Seconds < 10) Seconds = "0" + Seconds;
+
+        var final = hour + " : " + minutes + " : " + Seconds + " : " + period;
+        document.getElementsByTagName("div")[0].innerText = final;
+
+        setTimeout(time, 1000);
+      }
+    </script>
+  </head>
+
+  <body onload="time()">
+    
+    
+    <div></div>
+  </body>
+</html>
