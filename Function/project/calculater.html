@@ -1,33 +1,79 @@
 <html>
-  <head>
-    <title>Calculater</title>
-    <script>
-      function display(value) {
-        document.getElementById("result").value += value;
-      }
 
-      function clearScreen() {
-        document.getElementById("result").value = "";
-      }
+<head>
+  <title>Calculater</title>
+  <style>
+    body{
+      display: flex;
+      align-items: center;
+      background-color: rgb(169, 164, 164);
+      flex-direction: column;
+      
+      
+    }
+    #calc{
 
-      function calculate() {
-        let ans = document.getElementById("result").value;
-        let finalAnswer = eval(ans);
-        document.getElementById("result").value = finalAnswer;
+      color: rgb(246, 95, 14);
+    }
+    .btn {
+      padding: 10px;
+      border: 2px solid black;
+      width: 270px;
+      margin: auto;
+      height: 300px;
+      background-color: rgb(199, 204, 204);
       }
-    </script>
-  </head>
-  <body>
-    
+    #result{
+      width:100%;
+    }
+
+    td input[type="button"]{
+      background-color: black; 
+      color: white
+    }
+    td input {
+      height: 35px;
+      width: 40px;
+      margin: 12px;
+      padding: 10px;
+    }
+    div{
+      color: black;
+    }
+  </style>
+  <script>
+    function display(value) {
+      document.getElementById("result").value += value;
+    }
+
+    function clearScreen() {
+      document.getElementById("result").value = "";
+    }
+
+    function calculate() {
+      let ans = document.getElementById("result").value;
+      let finalAnswer = eval(ans);
+      document.getElementById("result").value = finalAnswer;
+    }
+  </script>
+</head>
+
+<body>
+   <h1>
+    Calculater
+   </h1>
+   
+  <div class="btn">
+    <input type="text" size="15px" id="result" />
     <table id="calc" height="200px" width="150px">
-      <input type="text" size="15px" id="result" />
+
       <tr>
-        <div class ="btn">
-        <td><input type="button"  value="1" onclick="display('1')" /></td>
-        <td><input type="button"  value="2" onclick="display('2')" /></td>
-        <td><input type="button"  value="3" onclick="display('3')" /></td>
-        <td><input type="button"  value="/" onclick="display('/')" /></td>
-        </div>
+
+        <td><input type="button" value="1" onclick="display('1')" /></td>
+        <td><input type="button" value="2" onclick="display('2')" /></td>
+        <td><input type="button" value="3" onclick="display('3')" /></td>
+        <td><input type="button" value="/" onclick="display('/')" /></td>
+
       </tr>
       <tr>
         <td><input type="button" value="4" onclick="display('4')" /></td>
@@ -49,5 +95,8 @@
         <td><input type="button" value="-" onclick="display('-')" /></td>
       </tr>
     </table>
-  </body>
+  </div>
+
+</body>
+
 </html>

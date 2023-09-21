@@ -1,46 +1,80 @@
 <html>
-  <head>
-    <title>Digital Clock</title>
 
-    <style>
-      div {
-        text-align: center;
-        font-size: 100px;
-        font-style: italic;
-        color: brown;
-      }
-    </style>
-    <script>
-      function time() {
-        var date = new Date();
-        var hour = date.getHours(0);
-        var minutes = date.getMinutes();
-        var Seconds = date.getSeconds();
+<head>
+  <title>Digital Clock</title>
 
-        var period = "";
+  <style>
+    body{
+      background-color: rgb(169, 164, 164);
+    }
+    #clock {
+    font-size: 150px;
+    width: 600px;
+    margin: 300px;
+    text-align: center;
+    border: 2px solid rgba(16, 2, 2, 0.891);
+    border-radius: 20px;
+    background-color: rgb(169, 164, 164);
+}
+    div {
 
-        if (hour >= 12) period = "PM";
-        else period = "AM";
+      text-align: center;
+      font-size: 100px;
+      font-style: italic;
+      color: rgb(20, 19, 19);
+      margin: auto;
 
-        if (hour > 12) hour = hour - 12;
 
-        if (hour < 10) hour = "0" + hour;
+    }
+    table{
+      border: 2px;
+    }
 
-        if (minutes < 10) minutes = "0" + minutes;
+    h3 {
+      text-align: center;
+      font-size: 100px;
+      font-style: italic;
+      color: darkblue;
+      margin: auto;
+    }
+  </style>
+  <script>
+    function time() {
+      var date = new Date();
+      var hour = date.getHours();
+      var minutes = date.getMinutes();
+      var Seconds = date.getSeconds();
 
-        if (Seconds < 10) Seconds = "0" + Seconds;
+      var period = "";
 
-        var final = hour + " : " + minutes + " : " + Seconds + " : " + period;
-        document.getElementsByTagName("div")[0].innerText = final;
+      if (hour >= 12) period = "PM";
+      else period = "AM";
 
-        setTimeout(time, 1000);
-      }
-    </script>
-  </head>
+      if (hour > 12) hour = hour - 12;
 
-  <body onload="time()">
-    
-    
-    <div></div>
-  </body>
+      if (hour < 10) hour = "0" + hour;
+
+      if (minutes < 10) minutes = "0" + minutes;
+
+      if (Seconds < 10) Seconds = "0" + Seconds;
+
+      var final = hour + ":" + minutes + ":" + Seconds + "  " + period;
+      document.getElementsByTagName("div")[0].innerText = final;
+      // document.getElementsByTagName("h3")[0].innerText = date;
+
+
+      setTimeout(time, 1000);
+    }
+  </script>
+</head>
+
+<body onload="time()"></body>
+    <div id="clock">
+      8:10:45
+    </div>
+  
+  
+  
+</body>
+
 </html>
