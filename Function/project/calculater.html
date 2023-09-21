@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Calculater</title>
+    <script>
+      function display(value) {
+        document.getElementById("result").value += value;
+      }
+
+      function clearScreen() {
+        document.getElementById("result").value = "";
+      }
+
+      function calculate() {
+        let ans = document.getElementById("result").value;
+        let finalAnswer = eval(ans);
+        document.getElementById("result").value = finalAnswer;
+      }
+    </script>
+  </head>
+  <body>
+    
+    <table id="calc" height="200px" width="150px">
+      <input type="text" size="15px" id="result" />
+      <tr>
+        <div class ="btn">
+        <td><input type="button"  value="1" onclick="display('1')" /></td>
+        <td><input type="button"  value="2" onclick="display('2')" /></td>
+        <td><input type="button"  value="3" onclick="display('3')" /></td>
+        <td><input type="button"  value="/" onclick="display('/')" /></td>
+        </div>
+      </tr>
+      <tr>
+        <td><input type="button" value="4" onclick="display('4')" /></td>
+        <td><input type="button" value="5" onclick="display('5')" /></td>
+        <td><input type="button" value="6" onclick="display('6')" /></td>
+        <td><input type="button" value="*" onclick="display('*')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="7" onclick="display('7')" /></td>
+        <td><input type="button" value="8" onclick="display('8')" /></td>
+        <td><input type="button" value="9" onclick="display('9')" /></td>
+        <td><input type="button" value="+" onclick="display('+')" /></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="0" onclick="display('0')" /></td>
+        <td><input type="button" value="=" onclick="calculate()" /></td>
+        <td><input type="button" value="C" onclick="clearScreen()" /></td>
+        <td><input type="button" value="-" onclick="display('-')" /></td>
+      </tr>
+    </table>
+  </body>
+</html>
