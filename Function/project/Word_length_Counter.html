@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Length Counter</title>
+    <style>
+        *{
+            background-color:antiquewhite;
+            
+        }
+        #result{
+
+            background-color:antiquewhite;
+            color: rgb(12, 12, 12);
+            margin-bottom: 20px;
+        }
+        input[type="button"]{
+             
+            background-color:rgb(214, 228, 228);
+        }
+    </style>
+    <script>
+
+        function Count(){
+
+            var text = document.getElementById("result").value; 
+             let length = text.length;      
+            document.getElementById("result").value = length;
+    }F
+    </script>
+</head>
+<body>
+    
+    <div>
+        <input type="text" size="50px" placeholder="Enter String" id="result"><br>
+        <input type="button" value="Click Here To Count String Length" size="20px" onclick="Count()"> 
+
+    </div>
+</body>
+</html>
