@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random String Generator</title>
+    <style>
+      h1 {
+        margin: auto;
+        border: 2px solid black;
+        width: 400px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      div {
+        margin: auto;
+        padding: 30px;
+        border: 2px solid black;
+        width: 500px;
+      }
+
+      input {
+        height: 50px;
+        width: 400px;
+        border: 2px solid black;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+      }
+    </style>
+    <script>
+      function string() {
+        var value = prompt("Enter Your string length", value);
+        var char = "abcdef ghi  jklm nopqr stuvwxyz";
+
+        var txt = " ";
+
+        for (let i = 0; i < value; i++) {
+          txt += char.charAt(Math.floor(Math.random() * char.length));
+        }
+        document.getElementById("result").value = txt;
+      }
+
+      function clearScreen() {
+        document.getElementById("result").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Generate Random String</h1>
+      <input
+        type="text"
+        id="result"
+        placeholder="Your String will  be shown Here"
+      /><br />
+      <input type="button" value="Generate a String" onclick="string()" />
+      <br />
+      <input type="button" value="Clear Screen" onclick="clearScreen()" />
+    </div>
+  </body>
+</html>

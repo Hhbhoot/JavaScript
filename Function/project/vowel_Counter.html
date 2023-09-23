@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vowel counter</title>
+    <style>
+        *{
+            background-color:rgb(107, 101, 97);
+        }
+      input {
+        text-align: center;
+        color: black;
+        height: 50px;
+        width: 340px;
+        font-size: 30px;
+        display: grid;
+        background-color:brown;
+      }
+      div{
+
+        padding: 10px;
+        border: 5px solid black;
+        width: 350px;
+        margin: auto;
+         height: 300px;
+         background-color:rgb(145, 160, 146);
+      }
+      h1{
+        margin: auto;
+        background-color:rgb(229, 20, 20);
+        border: 2px solid black;
+      }
+      .h1 {
+        margin: auto;
+        margin-top: 50px;
+      }
+      .h2 {
+        margin: auto;
+      }
+      .h3 {
+        margin: auto;
+      }
+    </style>
+    <script>
+      function vowelCount() {
+        var p = document.getElementById("result").value;
+        var count = 0;
+        for (let i = 0; i < p.length; i++) {
+          if (
+            p[i] == "a" ||
+            p[i] == "A" ||
+            p[i] == "e" ||
+            p[i] == "E" ||
+            p[i] == "i" ||
+            p[i] == "I" ||
+            p[i] == "o" ||
+            p[i] == "O" ||
+            p[i] == "u" ||
+            p[i] == "U"
+          )
+            count += 1;
+        }
+
+        document.getElementById("result").value = count;
+      }
+
+      function clearScreen() 
+      {
+      document.getElementById("result").value = "";
+    }
+   
+    </script>
+  </head>
+  <body>
+    <div>
+        <h1> Count Vowel in a String</h1>
+      <input
+        type="text"
+        class="h1"
+        id="result"
+        placeholder="Enter a String Here"
+      />
+      <br />
+      <input
+        type="button"
+        class="h2"
+        value="Click Here"
+        onclick="vowelCount()"
+      />
+      <br />
+      <input type="button" class="h3" value="Clear String" onclick="clearScreen()" />
+    </div>
+  </body>
+</html>
