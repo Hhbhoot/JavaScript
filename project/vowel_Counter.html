@@ -16,6 +16,7 @@
         font-size: 30px;
         display: grid;
         background-color:rgb(183, 176, 176);
+        border-radius: 50px;
       }
       div{
 
@@ -25,41 +26,36 @@
         margin: auto;
          height: 300px;
          background-color:rgb(145, 160, 146);
+         border-radius: 50px;
       }
       h1{
         margin: auto;
+        margin-top: 25px;
         background-color:rgb(76, 74, 74);
         border: 2px solid black;
+        border-radius: 50px;
       }
       .h1 {
         margin: auto;
-        margin-top: 50px;
+        margin-top: 20px;
       }
       .h2 {
         margin: auto;
       }
       .h3 {
         margin: auto;
+        margin-bottom: 5px;
       }
     </style>
     <script>
       function vowelCount() {
         var p = document.getElementById("result").value;
         var count = 0;
+        let arr =['a','A','e','E','i','I','o','O','u','U'];
         for (let i = 0; i < p.length; i++) {
-          if (
-            p[i] == "a" ||
-            p[i] == "A" ||
-            p[i] == "e" ||
-            p[i] == "E" ||
-            p[i] == "i" ||
-            p[i] == "I" ||
-            p[i] == "o" ||
-            p[i] == "O" ||
-            p[i] == "u" ||
-            p[i] == "U"
-          )
-            count += 1;
+          if (arr.includes(p[i]))
+            
+           count += 1;
         }
 
         document.getElementById("result").value = count;
