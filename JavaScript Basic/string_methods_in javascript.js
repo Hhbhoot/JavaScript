@@ -60,18 +60,39 @@
 // console.log(str.replace("Hello","Hi"));
 // console.log(str.replace(/hello/i,"Hi"));
 
-let a= "Hi , I am Hitesh, My name is Hitesh | Hitesh";
+// let a= "Hi , I am Hitesh, My name is Hitesh | Hitesh";
+// 
+// console.log(a.replace("Hitesh","Mitesh")); // only first match change
+// console.log(a.replace("Hitesh","Mitesh"))
+// 
+// a = a.replaceAll("Hitesh","Mitesh");
+// console.log(a);;
+// 
+// 
+// 
+// 
+// console.log(a.split());
+// console.log(a.split(" "));
+// console.log(a.split(","));
+// console.log(a.split("|"));
 
-console.log(a.replace("Hitesh","Mitesh")); // only first match change
-console.log(a.replace("Hitesh","Mitesh"))
-
-a = a.replaceAll("Hitesh","Mitesh");
-console.log(a);;
+// string.fromcharcode ==> convert ASCII value into character
 
 
 
+// console.log(String.fromCharCode(65));
+// console.log(String.fromCharCode(66));
+// console.log(String.fromCharCode(67));
+// console.log(String.fromCharCode(68));
 
-console.log(a.split());
-console.log(a.split(" "));
-console.log(a.split(","));
-console.log(a.split("|"));
+// localecompare
+
+// let str = "hello worls";
+// let str1 ="good morning"
+// 
+// let str3 = str.localeCompare(str1);
+// 
+// console.log(str)
+// 
+// console.log(str3);
+
