@@ -43,6 +43,15 @@
       #h2{
         width: 250px;
       }
+      p{
+        text-align:center;
+        height: 120px;
+        font-size: 20px;
+        border-radius: 50px;
+        top:50%;
+        left: 50%;
+        
+      }
     </style>
     <script>
       function string() {
@@ -54,22 +63,19 @@
         for (let i = 0; i < value; i++) {
           txt += char.charAt(Math.floor(Math.random() * char.length));
         }
-        document.getElementById("result").value = txt;
+        document.getElementById("result").innerHTML = txt;
       }
 
       function clearScreen() {
-        document.getElementById("result").value = "";
+        document.getElementById("result").innerHTML = "Your String Will Be Shown Here";
       }
     </script>
   </head>
   <body>
     <div align="center">
       <h1>Generate Random String</h1>
-      <input
-        type="text"
-        id="result"
-        placeholder="Your String will  be shown Here"
-      /><br />
+      <p id="result" > Your String Will be Shown Here </p>
+      <br />
       <input type="button" id="h1" value="Generate a String" onclick="string()" />
       <br />
       <input type="button" id="h2" value="Clear Screen" onclick="clearScreen()" />
