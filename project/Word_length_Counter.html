@@ -41,7 +41,7 @@
             border-radius: 50px;
             width: 310px;
             margin: auto;
-            height: 270px;
+            height: 310px;
             background-color:rgb(103, 103, 107);
         }
         h1{
@@ -71,6 +71,19 @@
         document.getElementById("result").value="";
     }
 
+    function countWord(){
+
+        var txt = document.getElementById("result").value;
+        
+        var arr = txt.split(" ");
+
+         var len  = arr.length;
+
+        document.getElementById("result").value = len;
+
+        
+    }
+
     </script>
 </head>
 <body>
@@ -78,7 +91,8 @@
     <h1> Word Length Counter </h1>
     <div>
         <input type="text" size="50px" placeholder="Enter String" id="result"><br>
-        <input type="button" value="Click Here" size="20px" onclick="Count()"> <br>
+        <input type="button" value="Count Character" size="20px" onclick="Count()"> <br>
+        <input type ="button" value="Count Word" onclick="countWord()">
         <input type="button" value="Clear String" onclick="clearScreen()">
 
     </div>
