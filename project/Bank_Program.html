@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Banking System </title>
+    <style>
+        * {
+            background-color: antiquewhite;
+        }
+
+        div {
+
+            display: flex;
+        }
+
+        input[type=button] {
+
+            width: 200px;
+            border-radius: 50px;
+        }
+
+        input {
+
+            width: 200px;
+            border-radius: 50px;
+
+        }
+    </style>
+    <script>
+
+
+        function Withdraw() {
+
+            var cb = 10000;
+
+            if (document.getElementById("withdraw").value > cb) {
+
+                document.getElementById("Total").value = "Insufficient Fund"
+            }
+            else {
+                var p = document.getElementById("withdraw").value
+                cb = cb - p;
+
+
+                document.getElementById("Total").value = cb;
+
+            }
+        }
+
+        function Deposit() {
+
+            var add = document.getElementById("Deposit").value;
+            cb += add;
+            document.getElementById("Total").value = cb;
+
+        }
+
+        function clearscreen() {
+
+            document.getElementById("withdraw").value = "";
+            document.getElementById("Deposit").value = "";
+
+        }
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div>
+
+        <input type="text" id="withdraw" placeholder=" widraw Amount">
+        <input type="text" id="Deposit" placeholder=" Deposit Amount">
+        <br>
+        <input type="text" id="Total" placeholder="Current Balance">
+        <br>
+    </div>
+    <br>
+    <div>
+
+        <input type="button" value="Withdraw" onclick="Withdraw()">
+        <input type="button" value="Deposit" onclick="Deposit()">
+        <input type="button" value="clear screen" onclick="clearscreen()">
+
+    </div>
+
+
+
+
+</body>
+
+</html>
